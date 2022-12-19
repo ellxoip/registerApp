@@ -11,5 +11,6 @@ npm i @capacitor/camera
 Equipo de trabajo:
 
 Carlos Muñoz
+Estoy solito :( 
 
 
