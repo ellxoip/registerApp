@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-title color="primary">Registrarse Estudiante</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">
+        Ingrese sus Datos
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro" (keyup.enter)="CrearUsuario()">
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Nombre</ion-label>
+          <ion-input color="primary" type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Correo</ion-label>
+          <ion-input color="primary" type="email" formControlName="correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" class="smalltext">Carrera: </ion-label>
+          <ion-select required>
+            <ion-select-option color="primary" class="smalltext" value="brown">Analista Programador
+              Computacional</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="blonde">Ingenieria en
+              Informatica</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="black">Tec. Redes</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="red">Ing. Redes</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Contraseña</ion-label>
+          <ion-input color="primary" type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Repita Contraseña</ion-label>
+          <ion-input color="primary" type="password" formControlName="confirmaPass"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox color="primary" slot="start" required></ion-checkbox>
+          <p color="primary">Acepto Terminos</p>
+        </ion-item>
+      </form>
+      <br>
+
+      <ion-button (click)="CrearUsuario()" expand="full" fill="solid" shape="round">
+        Registrar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="end">
+      <ion-button color="primary" [routerLink]="['/loginAlumno']">
+        Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

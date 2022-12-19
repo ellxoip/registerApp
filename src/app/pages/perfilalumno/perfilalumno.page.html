@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">Perfíl Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="padding-top">
+
+    <ion-card class="">
+
+      <ion-card-content class="ion-text-center">
+
+        <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+        <br>
+        <br>
+        <div>
+          <b>
+            <p class="subtitulo"> ¡Bienvenido, Alumno! </p>
+          </b>
+          <br>
+          <br>
+          <b>
+            <p class="titulo"></p>
+          </b>
+        </div>
+
+
+        <div class="padding-boton">
+
+          <ion-button color="danger" [routerLink]="['/escanearQR']">
+            <ion-icon name="qr-code-outline"></ion-icon>
+            Escanear QR
+          </ion-button>
+
+
+
+          <ion-button color="danger" [routerLink]="['/']">
+            <ion-icon name="return-up-back-outline"></ion-icon>
+            Salir
+          </ion-button>
+
+        </div>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+</ion-content>

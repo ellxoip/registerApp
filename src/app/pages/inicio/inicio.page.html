@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-content>
+    <ion-card>
+      <img src="assets/logo.png" class="ion-padding">
+    </ion-card>
+    <div>
+      <ion-card>
+        <ion-card-content class="ion-text-center">
+          <!-- <img class="padding-boton" src="assets/ionicLogo.png" alt=""> -->
+
+          <ion-card-header class="alinear">
+            <ion-card-title>Bienvenido/a</ion-card-title>
+            <ion-card-subtitle>Ingresar:</ion-card-subtitle>
+          </ion-card-header>
+          <div class="padding-boton">
+
+            <ion-button expand="full" fill="solid" shape="round" routerLink="/elegir">
+              Iniciar Sesion
+            </ion-button>
+
+          </div>
+        </ion-card-content>
+
+      </ion-card>
+
+    </div>
+
+  </ion-card-content>
+</ion-content>

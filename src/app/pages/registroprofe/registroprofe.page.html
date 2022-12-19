@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-title color="primary">Registrarse</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">
+        Ingrese sus Datos
+      </ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      <ion-item>
+        <img src="assets/regdocente.png" class="ion-padding">
+      </ion-item>
+      <form [formGroup]="formularioRegistroprofe" (keyup.enter)="CrearUsuariop()">
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Nombre</ion-label>
+          <ion-input color="primary" type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Correo</ion-label>
+          <ion-input color="primary" type="email" formControlName="correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" class="smalltext">Asignatura </ion-label>
+          <ion-select required>
+            <ion-select-option color="primary" class="smalltext" value="brown">Arquitectura</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="blonde">Calidad de Software</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="black">Programacion de
+              Algoritmos</ion-select-option>
+            <ion-select-option color="primary" class="smalltext" value="red">Consultas de Bases de
+              Datos</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Contraseña</ion-label>
+          <ion-input color="primary" type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Repita Contraseña</ion-label>
+          <ion-input color="primary" type="password" formControlName="confirmaPass"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox color="primary" slot="start" required></ion-checkbox>
+          <p color="primary">Acepto Terminos</p>
+        </ion-item>
+      </form>
+      <br>
+
+      <ion-button (click)="CrearUsuariop()" expand="full" fill="solid" shape="round">
+        Registrar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="end">
+      <ion-button color="primary" [routerLink]="['/loginProfe']">
+        Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,71 @@
+<ion-app>
+
+  <!--menu 1-->
+  <ion-menu contentId="main" menuId="first" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title color="primary">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let c of componentes" color="primary">
+          <ion-item [routerLink]="c.redirecTo" detail=true>
+            <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+            {{ c.name }}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+
+  <!--menu profes-->
+
+  <ion-menu contentId="main2" menuId="profe" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title color="primary">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let p of componentes_p" color="primary">
+          <ion-item [routerLink]="p.redirecTo" detail=true>
+            <ion-icon slot="start" [name]="p.icon" color="primary"></ion-icon>
+            {{ p.name }}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+<ion-router-outlet id="main2"></ion-router-outlet>
+
+
+    <!--menu alumnos-->
+
+    <ion-menu contentId="main3" menuId="alumno" side="start">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title color="primary">Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle *ngFor="let a of componentes_a" color="primary">
+            <ion-item [routerLink]="a.redirecTo" detail=true>
+              <ion-icon slot="start" [name]="a.icon" color="primary"></ion-icon>
+              {{ a.name }}
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+  <ion-router-outlet id="main3"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listar Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Boton flotante :D -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/agregar-asistencia']" color="primary" fill="clear">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <!-- Lista de asistencias -->
+  <ion-card *ngFor="let asistencia of asistencias">
+      <ion-card-title>
+        {{ asistencia.nombre }}
+      </ion-card-title>
+      <ion-card-title>
+        {{ asistencia.curso}}
+      </ion-card-title>
+      <ion-card-title>
+        {{ asistencia.fecha }}
+      </ion-card-title>
+    <ion-card-content style="display: flex; justify-content: space-between;">
+      <ion-button  [routerLink]="['/modificar-asistencia',asistencia.id]">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" [routerLink]="['/eliminar-asistencia',asistencia.id]">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

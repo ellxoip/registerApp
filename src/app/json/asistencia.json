@@ -1,0 +1,16 @@
+{
+  "asistencias": [
+    {
+      "nombre": "Joaquin Prieto",
+      "curso": "006v",
+      "fecha": "12/02/2022",
+      "id": 1
+    },
+    {
+      "nombre": "Felipe Alvornoz",
+      "curso": "007v",
+      "fecha": "14/06/2022",
+      "id": 2
+    }
+  ]
+}

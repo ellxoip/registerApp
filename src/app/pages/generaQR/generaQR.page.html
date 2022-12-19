@@ -1,0 +1,56 @@
+<ion-header>
+  <!-- TOOLBAR -->
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+        <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+
+
+      <ion-card-title class="titulo">
+        Profesor
+      </ion-card-title>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label class="smalltext">Nombre: </ion-label>
+          <ion-input class="smalltext" type="text" [(ngModel)]="usuariop.nombre" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="smalltext">Sección: </ion-label>
+          <ion-input class="smalltext" type="text" [(ngModel)]="usuariop.seccion" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="smalltext">Fecha: </ion-label>
+          <ion-input class="smalltext" type="date" [(ngModel)]="usuariop.fecha" placeholder="dd/mm/yyy"
+            required></ion-input>
+        </ion-item>
+
+
+        <ion-card-header class="alinear">
+
+        </ion-card-header>
+
+        <ion-button expand="full" (click)="generarQR()" fill="solid" shape="round">
+          Activar Qr
+        </ion-button>
+        <br>
+
+        <qrcode class="alinear" [qrdata]="qrCodeString" [width]="200" [errorCorrectionLevel]="'M'">
+        </qrcode>
+      </ion-card-content>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

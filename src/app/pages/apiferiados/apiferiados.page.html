@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-title color="primary">Feriados de Chile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-grid fixed>
+    <br>
+
+    <ion-card-title class="titulo">
+      Feriados Año 2022
+    </ion-card-title>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let feriado of feriados; let i=index">
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <span class="text-primary">{{i + 1}}. </span>
+
+            </ion-card-subtitle>
+            <ion-card-title><strong>Feriado:</strong> {{feriado.title}}</ion-card-title>
+            <ion-card-title><strong>Tipo Feriado: </strong>{{feriado.type}}</ion-card-title>
+            <ion-card-title><strong>Fecha: </strong>{{feriado.date}}</ion-card-title>
+            <ion-card-title><strong>Irrenunciable: </strong>{{ feriado.inalienable ? 'si' : 'no' }}</ion-card-title>
+            <ion-card-title><strong></strong>{{feriado.extra}}</ion-card-title>
+
+          </ion-card-header>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

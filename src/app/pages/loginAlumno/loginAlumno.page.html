@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-title color="primary">Alumnos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Atras" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">
+        Ingrese sus Datos
+      </ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <img src="assets/regestudiante.png">
+    </ion-item>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item shape="round">
+          <ion-label color="primary" position="floating">Correo: </ion-label>
+          <ion-input color="primary" type="email" formControlName="correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" position="floating">Contraseña: </ion-label>
+          <ion-input color="primary" type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="Ingresar()" expand="full" fill="solid" shape="round">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="colortoolbar">
+    <ion-buttons slot="end">
+      <ion-button color="primary" [routerLink]="['/registro']">
+
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

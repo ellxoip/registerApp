@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>eliminarAsistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="asistenciaActivo">
+    <ion-card-header>
+      <ion-card-title>
+        {{ asistenciaActivo.nombre }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-title>
+        {{ asistenciaActivo.curso}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-title>
+        {{ asistenciaActivo.fecha }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="display: flex; justify-content: space-between;">
+      <ion-button  [routerLink]="['']">
+        <ion-icon name="caret-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" (click)="borrar()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

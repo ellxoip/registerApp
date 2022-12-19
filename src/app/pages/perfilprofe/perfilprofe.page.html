@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="colortoolbar">
+    <ion-title color="primary">Perfil Profesor</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label></ion-label>
+    </ion-item>
+  </ion-card>
+
+
+  <div class="padding-top">
+
+    <ion-card class="ancho cajita inicio">
+
+      <ion-card-content class="ion-text-center">
+
+        <img class="logopadding" width="45%" src="assets/teacher.png" alt="">
+
+        <div>
+          <b>
+            <p class="subtitulo"> ¡Bienvenido, Profesor! </p>
+          </b>
+          <b>
+            <p class="titulo"></p>
+          </b>
+        </div>
+        <br>
+        <br>
+
+
+        <!-- BOTONES -->
+        <div class="padding-boton">
+
+          <ion-button class="botonesinicio" routerLink="/generaQR">
+            Generar QR
+          </ion-button>
+          <br>
+
+
+          <ion-button class="botonesinicio" routerLink="/listar-asistencia">
+            Revisar asistencia
+          </ion-button>
+
+          <ion-button (click)="CerrarSesion()" color="danger">
+            Salir
+          </ion-button>
+
+
+
+          <!--<ion-content>
+                  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+                    <ion-fab-button (click)="addPhotoToGallery()">
+                      <ion-icon name="camera"></ion-icon>
+                    </ion-fab-button>
+                  </ion-fab>
+                </ion-content>!-->
+
+        </div>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+</ion-content>

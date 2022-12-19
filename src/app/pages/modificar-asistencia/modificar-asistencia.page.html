@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modificarAsistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="guardarAsistencia()">
+
+    <ion-item>
+      <ion-label color="primary" position="floating">Nombre</ion-label>
+      <ion-input color="primary" type="text" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="floating">Session</ion-label>
+      <ion-input color="primary" type="text" formControlName="curso"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="floating">Fecha</ion-label>
+      <ion-input color="primary" type="text" formControlName="fecha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button role="submit" type="submit" >
+        Agregar
+      </ion-button>
+    </ion-item>
+  </form>
+
+</ion-content>
